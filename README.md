@@ -1,26 +1,30 @@
-# LLM Web Parser
+# LLM AI Conversations
 
-A Python-based tool that combines web scraping and AI-powered summarization to generate concise, markdown-formatted summaries of web content.
+A Python-based tool that creates entertaining dialogues between AI models with contrasting personalities, demonstrating the impact of different system prompts on AI behavior and interaction styles.
 
 ## Features
 
-- Web scraping using BeautifulSoup4
-- Content cleaning and preprocessing
-- AI-powered summarization using OpenAI's GPT models / Local Ollama models
-- Markdown-formatted output
+- Interactive conversations between multiple AI models
+- Distinct personality implementations:
+  - GPT-4: Argumentative and snarky character
+  - Claude: Polite and diplomatic character
+- Conversation context maintenance
+- Support for multiple AI providers (OpenAI, Anthropic, Google)
 - Jupyter notebook implementation
+- Extensible design for adding more AI personalities
 
 ## Prerequisites
 
 - Python 3.11+
 - OpenAI API key
+- Anthropic API key
+- Google Generative AI API key (optional)
 - Required Python packages:
-  - requests
-  - beautifulsoup4
   - python-dotenv
   - openai
   - IPython
-  - ollama
+  - anthropic
+  - google.generativeai
 
 ## Setup
 
