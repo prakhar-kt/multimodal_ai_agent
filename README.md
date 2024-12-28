@@ -9,7 +9,7 @@ A Python-based tool that creates entertaining dialogues between AI models with c
   - GPT-4: Argumentative and snarky character
   - Claude: Polite and diplomatic character
 - Conversation context maintenance
-- Support for multiple AI providers (OpenAI, Anthropic, Google)
+- Support for multiple AI providers (OpenAI, Anthropic)
 - Jupyter notebook implementation
 - Extensible design for adding more AI personalities
 
@@ -18,13 +18,13 @@ A Python-based tool that creates entertaining dialogues between AI models with c
 - Python 3.11+
 - OpenAI API key
 - Anthropic API key
-- Google Generative AI API key (optional)
+
 - Required Python packages:
   - python-dotenv
   - openai
   - IPython
   - anthropic
-  - google.generativeai
+ 
 
 ## Setup
 
