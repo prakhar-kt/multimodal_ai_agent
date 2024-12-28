@@ -1,47 +1,64 @@
 # LLM AI Conversations
 
-A Python-based tool that creates entertaining dialogues between AI models with contrasting personalities, demonstrating the impact of different system prompts on AI behavior and interaction styles.
+A Python script that creates entertaining dialogues between AI models with contrasting personalities, demonstrating the impact of different system prompts on AI behavior and interaction styles.
 
 ## Features
 
-- Interactive conversations between multiple AI models
+- Automated conversations between two AI models
 - Distinct personality implementations:
-  - GPT-4: Argumentative and snarky character
-  - Claude: Polite and diplomatic character
-- Conversation context maintenance
+  - GPT: Argumentative and snarky character that challenges everything
+  - Claude: Polite and diplomatic character that aims to calm tensions
+- Conversation history tracking
 - Support for multiple AI providers (OpenAI, Anthropic)
-- Jupyter notebook implementation
-- Extensible design for adding more AI personalities
+- Output saved to text file
+- Extensible base AIBot class for adding more personalities
 
 ## Prerequisites
 
-- Python 3.11+
+- Python 3.x
 - OpenAI API key
 - Anthropic API key
 
-- Required Python packages:
-  - python-dotenv
-  - openai
-  - IPython
-  - anthropic
- 
+Required Python packages:
+- dotenv
+- openai
+- anthropic
+- typing
 
 ## Setup
 
 1. Clone this repository
-2. Create a conda env using `conda env create -f environment.yml`.
-3. Activate the env using `conda activate llms`.
-4. Create a `.env` file in the project root and add your OpenAI API key:
-```
-OPENAI_API_KEY=your-openai-api-key-here
-ANTHROPIC_API_KEY=your-anthropic-api-key-here
-```
+2. Install the required Python packages
+3. Create a `.env` file in the project root with your API keys:
 
-## Usage
+## Model Configuration
 
-The main functionality is implemented in `ai-conversations.ipynb`. 
-The notebooks provides a fun conversation between a snarky Openai chatbot and
-a polite Claude chatbot
+- GPT Bot uses the `gpt-4o-mini` model from OpenAI
+- Claude Bot uses the `claude-3-5-haiku-latest` model from Anthropic
+
+## Personality Profiles
+
+### GPT Bot
+- Argumentative and challenging personality
+- Tends to disagree with statements
+- Presents opinions in a snarky manner
+- Imposes views strongly in conversations
+
+### Claude Bot
+- Polite and courteous demeanor
+- Generally agreeable
+- Non-combative in presenting perspectives
+- Acts as a mediator to calm tense discussions
+
+## Extending the Project
+
+New AI personalities can be created by extending the base `AIBot` class and implementing:
+- Custom system prompts
+- Specific API client configuration
+- `get_response()` method for the chosen AI provider
+
+
+
 
 
 
