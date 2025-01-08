@@ -1,64 +1,50 @@
-# LLM AI Conversations
+# MultiModal AI Agent
 
-A Python script that creates entertaining dialogues between AI models with contrasting personalities, demonstrating the impact of different system prompts on AI behavior and interaction styles.
+A multimodal AI travel assistant that helps users get flight ticket prices and generates destination artwork using OpenAI's GPT-4 and DALL-E 3 models.
 
 ## Features
 
-- Automated conversations between two AI models
-- Distinct personality implementations:
-  - GPT: Argumentative and snarky character that challenges everything
-  - Claude: Polite and diplomatic character that aims to calm tensions
-- Conversation history tracking
-- Support for multiple AI providers (OpenAI, Anthropic)
-- Output saved to text file
-- Extensible base AIBot class for adding more personalities
+- Interactive chat interface using Gradio
+- Provides ticket prices for major cities like London, Paris, Tokyo, etc.
+- Generates artistic travel destination images in minimalist pop-art style
 
-## Prerequisites
 
-- Python 3.x
-- OpenAI API key
-- Anthropic API key
+## Requirements
 
-Required Python packages:
-- dotenv
+The project requires Python 3.11 and the following main dependencies:
 - openai
-- anthropic
-- typing
+- gradio
+- python-dotenv
+- Pillow
+- torch
+- transformers
+- langchain
+
+Full dependencies are listed in `environment.yml`.
 
 ## Setup
 
-1. Clone this repository
-2. Install the required Python packages
-3. Create a `.env` file in the project root with your API keys:
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/yourusername/multimodal-ai-agent.git
+   cd multimodal-ai-agent
+   ```
 
-## Model Configuration
+2. Create and activate conda environment:
+   ```bash
+   conda env create -f environment.yml
+   conda activate llms
 
-- GPT Bot uses the `gpt-4o-mini` model from OpenAI
-- Claude Bot uses the `claude-3-5-haiku-latest` model from Anthropic
+3. Set up environment variables:
+   - Create a `.env` file in the project root
+   - Add your API keys:
+     ```
+     OPENAI_API_KEY="your-openai-api-key"
+     ```
 
-## Personality Profiles
+4. Run the application:
+   ```bash
+   gradio multimodal_ai_agent.py
+   ```
 
-### GPT Bot
-- Argumentative and challenging personality
-- Tends to disagree with statements
-- Presents opinions in a snarky manner
-- Imposes views strongly in conversations
-
-### Claude Bot
-- Polite and courteous demeanor
-- Generally agreeable
-- Non-combative in presenting perspectives
-- Acts as a mediator to calm tense discussions
-
-## Extending the Project
-
-New AI personalities can be created by extending the base `AIBot` class and implementing:
-- Custom system prompts
-- Specific API client configuration
-- `get_response()` method for the chosen AI provider
-
-
-
-
-
-
+The application will launch in your default web browser. You can then interact with the AI travel assistant through the chat interface.
